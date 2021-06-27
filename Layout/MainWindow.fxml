@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="430.0" styleClass="main-window" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Pane layoutX="35.0" layoutY="302.0" prefHeight="127.0" prefWidth="351.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="302.0">
+         <children>
+            <TextField fx:id="file_path" focusTraversable="false" layoutY="16.0" prefHeight="25.0" prefWidth="135.0" promptText="Enter File Path" styleClass="text-field">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </TextField>
+            <Button layoutX="18.0" layoutY="63.0" mnemonicParsing="false" onAction="#Send_file" prefHeight="26.0" prefWidth="100.0" styleClass="main-button" stylesheets="@Style.css">
+               <graphic>
+                  <FontAwesomeIcon glyphName="SEND" size="1.5em" />
+               </graphic>
+            </Button>
+            <Button layoutX="209.0" layoutY="63.0" mnemonicParsing="false" onAction="#Schedule_file" prefHeight="42.0" prefWidth="106.0" styleClass="main-button" stylesheets="@Style.css" text="Schedule">
+               <graphic>
+                  <FontAwesomeIcon glyphName="ANGLE_DOUBLE_RIGHT" size="1.5em" />
+               </graphic>
+               <font>
+                  <Font name="Courier New Bold" size="13.0" />
+               </font>
+            </Button>
+            <Separator layoutX="185.0" orientation="VERTICAL" prefHeight="127.0" prefWidth="0.0" />
+            <Button contentDisplay="GRAPHIC_ONLY" layoutX="142.0" layoutY="16.0" mnemonicParsing="false" onAction="#browse_file" prefHeight="10.0" prefWidth="30.0">
+               <graphic>
+                  <FontAwesomeIcon glyphName="PAPERCLIP" size="1.5em" />
+               </graphic>
+            </Button>
+            <TextField fx:id="time" focusTraversable="false" layoutX="209.0" layoutY="17.0" prefHeight="25.0" prefWidth="71.0" promptText="Time" styleClass="text-field">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font>
+            </TextField>
+            <Label layoutX="288.0" layoutY="16.0" prefHeight="25.0" prefWidth="53.0" text="In Min.">
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ScrollPane hbarPolicy="NEVER" layoutX="35.0" layoutY="38.0" prefHeight="275.0" prefWidth="409.0" style="-fx-background: transparent; -fx-background-color: transparent;" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+         <content>
+            <VBox fx:id="list" alignment="TOP_CENTER" prefHeight="271.0" prefWidth="398.0" spacing="10.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
